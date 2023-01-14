@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
+import { RouterModule } from '@angular/router';
 const Components = [HeaderComponent]
 
 
@@ -9,7 +10,8 @@ const Components = [HeaderComponent]
     Components
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:Components
 })
