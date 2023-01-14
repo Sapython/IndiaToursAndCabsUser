@@ -1,0 +1,66 @@
+<div class="main_container">
+  <header>
+    <h2 class="header_h2">Bus Rental</h2>
+  </header>
+  <section class="content">
+    <h4>Bus Rental in Jaipur</h4>
+    <p>If you are planning to hire a bus in Jaipur for local jaipur city transportation like
+      wedding,
+      events, airport pic/ drop or planning a trip from Jaipur for any city, temple in Rajasthan or
+      Hill
+      stations o Himachal, Rajputana Cabs® offer its Jaipur Bus rental service, starting at Rs 20
+      per km
+      or Rs 5,000 per day for outstation trip, price lower for local Jaipur.</p>
+  </section>
+  <img class="header_img" src="../../assets/images/jtaHeader.png" alt="">
+  <p class="more_data content">View our Jaipur Bus rental & seating capacity:
+    In Jaipur, we have three types of bus categories, apart from luxury & deluxe seating capacity.
+    These
+    are mini buses, which are are 12, 16 & 27 seater Tempo traveller along with 18 & 21 seater TATA
+    Mini
+    bus (all AC), first category.
+    The second category is 27, 31, 35 seater medium size bus, which are available at a starting fare
+    of
+    Rs 28 per km (Rs 7000 for outstation and a bit lower fare for local Jaipur).
+    In third category we have 41 seater, 45 seater, 50 seater, 52 seater, and 56 seater bus. There
+    are
+    our big buses.
+    The fare for local Jaipur is lower as our local bus rental package is for 8 hour and 80 km, and
+    for
+    all outstation trip, we charge on per km bases, like our 28 seater Tata bus starts at Rs 33 per
+    km.
+    For more details, view our bus categories below & call me (Mr CB Singh) at:</p>
+  <hr>
+  <section class="check_services content">
+    <h4>Checkout our services in Jaipur:</h4>
+    <div class="cards">
+      <div class="card" *ngFor="let item of servicesData">
+        <img src={{item.img}} alt="vehicle_img">
+        <div>
+          <h5>{{item.title}}</h5>
+          <p>{{item.detail}}</p>
+          <button>More Info</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="plan_a_trip content">
+    <h4>Plan a trip to any destination from Jaipur, at best price:</h4>
+    <div class="cards">
+      <div class="card" *ngFor="let item of tripPlanData">
+        <div class="card_div_1">
+          <img src={{item.img}} alt="img">
+          <div class="card_div_2">
+            <p class="trip_length">{{item.trip_length}}</p>
+            <h6>{{item.from}} to {{item.to}} taxi</h6>
+            <div class="misc_data">
+              <p>{{item.about}}</p>
+              <p>No. of stoppage: {{item.no_of_stops}}</p>
+            </div>
+          </div>
+        </div>
+        <p class="price">₹ {{item.price}}</p>
+      </div>
+    </div>
+  </section>
+</div>

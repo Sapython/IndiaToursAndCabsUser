@@ -1,0 +1,60 @@
+<div class="main_container">
+  <header>
+    <h2 class="header_h2">Jaipur travel agency</h2>
+    <img class="header_img" src="../../assets/images/jtaHeader.png" alt="">
+  </header>
+  <section class="content">
+    <h4>Rajputana Cabs, a Jaipur based travel agency</h4>
+    <p>Rajputana Cabs is a leading tour and travel agency in Jaipur, which offers its service
+      (mentioned
+      below) since 2013. <br>
+      We are a GST registered travel agency which offer both, best tour packages for Jaipur & all
+      destinations of Rajasthan; <br>
+      And for destinations outside Rajasthan in India (like Manali, Goa, Kerala etc) and outside
+      India
+      (Thailand, Singapore, Bali, Hong Kong etc)
+      Our USP: <br>
+      Offer company owner taxi service in Jaipur: We have our own company cabs (10 sedan, 2 SUV & 2
+      tempo
+      traveller) and a fleet of more than 100 cars where we have 90+ cabs in Jaipur working with us
+      on
+      monthly basis. <br>
+      Thus, on a short notice we can offer 100 plus tourist taxi cabs for your event like wedding,
+      conference etc. <br>
+      View all our tour packages & services below, and feel free to call us at +91 9319077085 (Mr.
+      Jatin).</p>
+  </section>
+  <hr>
+  <section class="check_services content">
+    <h4>Checkout our services in Jaipur:</h4>
+    <div class="cards">
+      <div class="card" *ngFor="let item of servicesData">
+        <img src={{item.img}} alt="vehicle_img">
+        <div>
+          <h5>{{item.title}}</h5>
+          <p>{{item.detail}}</p>
+          <button>More Info</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="plan_a_trip content">
+    <h4>Plan a trip to any destination from Jaipur, at best price:</h4>
+    <div class="cards">
+      <div class="card" *ngFor="let item of tripPlanData">
+        <div class="card_div_1">
+          <img src={{item.img}} alt="img">
+          <div class="card_div_2">
+            <p class="trip_length">{{item.trip_length}}</p>
+            <h6>{{item.from}} to {{item.to}} taxi</h6>
+            <div class="misc_data">
+              <p>{{item.about}}</p>
+              <p>No. of stoppage: {{item.no_of_stops}}</p>
+            </div>
+          </div>
+        </div>
+        <p class="price">₹ {{item.price}}</p>
+      </div>
+    </div>
+  </section>
+</div>
