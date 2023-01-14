@@ -1,0 +1,43 @@
+<div class="main-container">
+    <div class="header">
+      <div class="left">
+      <img src="assets/img/LeftLogo.svg">
+      </div>
+      
+      <div class="center">
+        <img src="assets/img/CenterLogo.svg">
+      </div>
+      
+      <div class="right">
+        <img src="assets/img/RightLogo.svg">
+      </div>
+    </div>
+  
+    <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom-medium">
+    <div class="footer">
+        <form [formGroup]="loginForm">
+          <thead>
+            <h1>Forgot Password</h1>
+          </thead>
+          <div>
+            <p>Set the new password for your account <br>so you can login and access all the features</p>
+          </div>
+  
+          <tbody>
+              <input type="password" formControlName="email" class="custom" placeholder="  New Password">
+            
+  
+            <input type="password" formControlName="email" class="custom" placeholder="  Confirm Password">
+            
+    
+          </tbody>
+        
+        </form>
+  
+        <div class="btn">
+          <ion-button fill="none" (click)="submit()" routerLink="/registration/login">Continue</ion-button>
+        </div>
+    </div>
+    </div>
+  </div>
+  

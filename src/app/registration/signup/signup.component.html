@@ -1,0 +1,50 @@
+<div class="main-container">
+    <div class="header">
+      <div class="left">
+      <img src="assets/img/LeftLogo.svg">
+      </div>
+      
+      <div class="center">
+        <img src="assets/img/CenterLogo.svg">
+      </div>
+      
+      <div class="right">
+        <img src="assets/img/RightLogo.svg">
+      </div>
+    </div>
+  
+    <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom-medium">
+    <div class="footer">
+        <form [formGroup]="signup">
+          <thead>
+            <h1>Signup</h1>
+          </thead>
+  
+          <tbody>
+              <input type="text" placeholder="  Full Name" class="custom" formControlName="name">
+              <input type="email" placeholder="  Email" class="custom" formControlName="email">
+    
+            <input type="password" placeholder="  Password" class="custom" formControlName="password">
+
+            <input type="password" placeholder="  Confirm Password" class="custom" formControlName="confirmPassword">
+          </tbody>
+        
+        </form>
+        
+        <div class="login">
+          <p>Already have an Account?</p>
+          <span style="color: orange;" routerLink="/registration/login">&nbsp;Login</span>
+        </div>
+
+        <div class="btn" >
+          <button fill="none"  (click)="signUp()">Signup</button>
+        </div>
+  
+        <div class="google" (click)="googleSignup()">
+            <img src="assets/img/Google.png" alt="">
+            <p>or use your Google account</p>
+        </div>
+    </div>
+    </div>
+  </div>
+  

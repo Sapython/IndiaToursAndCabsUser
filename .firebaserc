@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "indiatoursandcabs": {
+      "hosting": {
+        "IndiaToursAndCabsUser": [
+          "indiatoursandcabs"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "indiatoursandcabs"
+  }
+}
