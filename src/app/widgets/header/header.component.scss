@@ -9,6 +9,24 @@
         backdrop-filter: blur(5px);
     }
 }
+@keyframes openOverlay {
+    0% {
+        display: block !important;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes closeOverlay {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none !important;
+    }
+}
 p{
     display: flex;
     align-items: center;
@@ -27,6 +45,12 @@ p{
     background: rgba(0,0,0,0.5);
     z-index: 999;
     animation:movingbackdrop 10s ease-in-out infinite;
+}
+.overlay.close{
+    animation: closeOverlay 0.5s ease-in-out forwards;
+}
+.overlay.open{
+    animation: openOverlay 0.5s ease-in-out forwards;
 }
 section{
     z-index: 1000;
@@ -86,4 +110,10 @@ section.open{
 }
 section.close{
     transform: translateX(0%);
+}
+@media screen and (max-width: 768px) {
+    section{
+        width: 80vw;
+    }
+    
 }
