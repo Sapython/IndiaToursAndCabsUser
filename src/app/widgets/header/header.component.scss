@@ -1,0 +1,119 @@
+@keyframes movingbackdrop {
+    0% {
+        backdrop-filter: blur(5px);
+    }
+    50% {
+        backdrop-filter: blur(20px);
+    }
+    100%{
+        backdrop-filter: blur(5px);
+    }
+}
+@keyframes openOverlay {
+    0% {
+        display: block !important;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes closeOverlay {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none !important;
+    }
+}
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    i{
+        font-size: 20px;
+    }
+}
+.overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    animation:movingbackdrop 10s ease-in-out infinite;
+}
+.overlay.close{
+    animation: closeOverlay 0.5s ease-in-out forwards;
+}
+.overlay.open{
+    animation: openOverlay 0.5s ease-in-out forwards;
+}
+section{
+    z-index: 1000;
+    position: absolute;
+    top: 0px;
+    width: 400px;
+    left: 100vw;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
+    background-color: #e6e7ee;
+    box-shadow: -5px 0px 50px rgba(0, 0, 0, 0.093);
+    .detail{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 3px solid #ccc;
+        .user{
+            width: 100%;
+            align-items: center;
+            display: flex;
+            img{
+                width: 50px;
+                height: auto;
+                border-radius: 50%;
+            }
+            p{
+                margin: 0;
+                padding: 0;
+                margin-left: 10px;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        button{
+            width: 50px;
+        }
+    }
+    button{
+        max-height: 50px;
+        width: 85%;
+    }
+    button.logout{
+        position: relative;
+        top: 50%;
+    }
+}
+section.open{
+    transform: translateX(-100%);
+}
+section.close{
+    transform: translateX(0%);
+}
+@media screen and (max-width: 768px) {
+    section{
+        width: 80vw;
+    }
+    
+}

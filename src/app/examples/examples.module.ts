@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ExamplesRoutingModule } from './examples-routing.module';
 import { ExamplesComponent } from './examples.component';
+import { WidgetsModule } from '../widgets/widgets.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ExamplesComponent } from './examples.component';
   ],
   imports: [
     CommonModule,
-    ExamplesRoutingModule
+    ExamplesRoutingModule,
+    WidgetsModule
   ]
 })
 export class ExamplesModule { }

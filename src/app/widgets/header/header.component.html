@@ -1,0 +1,26 @@
+<div>
+    <button (click)="sidebarOpen=!sidebarOpen" class="btn btn-icon-only btn-primary" type="button" aria-label="love button" title="love button">
+        <i class="ri-menu-3-line"></i>
+    </button>
+</div>
+
+<section [class]="sidebarOpen ? 'open' : 'close'">
+    <div class="detail">
+        <div class="user">
+            <img [src]="userImage" referrerPolicy="no-referrer">
+            <p>{{userName}}</p>
+        </div>
+        <button class="btn btn-icon-only btn-primary" type="button" (click)="sidebarOpen=!sidebarOpen" aria-label="love button" title="love button">
+            <i class="ri-close-fill"></i>
+        </button>
+    </div>
+    <button *ngFor="let link of links" [routerLink]="link.link" class="btn btn-primary animate-right-3" type="button">
+        <p><i [class]="link.icon"></i> {{link.text}}</p>
+    </button>
+
+    <button class="btn btn-primary animate-right-3 logout" type="button">
+        <p><i class="ri-logout-box-r-fill"></i> Logout</p>
+    </button>
+
+</section>
+<div class="overlay" *ngIf="sidebarOpen"></div>
