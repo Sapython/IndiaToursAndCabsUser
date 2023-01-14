@@ -28,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/neoMorphicLibrary/css/neumorphism.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -97,8 +96,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/neoMorphicLibrary/css/neumorphism.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
